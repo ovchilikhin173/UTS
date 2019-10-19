@@ -6,4 +6,7 @@ class User < ApplicationRecord
   validates :password, presence: true, format: PASSWORD_FORMAT, :on => :create
   validates :password, allow_blank: true, format: PASSWORD_FORMAT, :on => :update
   has_secure_password
+
+
+  has_many :subjects
 end
